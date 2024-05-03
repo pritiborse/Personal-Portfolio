@@ -534,52 +534,43 @@ header .container{
 
   
 
-  .image-row {
+ .image-row {
     display: flex;
     justify-content: center;
-    max-width: 100%;
+    flex-wrap: wrap; /* Allow images to wrap */
     margin-bottom: 50px; /* Adjust spacing between rows */
   }
   
   .image-row img {
-    width: 350px; 
-    height: 200px; 
-    flex:1;
-    margin: 0 10px; /* Adjust spacing between images */
+    width: 350px; /* Set a fixed width for the images */
+    height: 200px; /* Set a fixed height for the images */
+    margin: 0 10px 20px; /* Adjust spacing between images */
   }
+  
   .click{
     position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
+  
   .image-wrapper:hover img {
     transform: scale(1.1);
   }
+  
   .image-wrapper:hover .click {
     opacity: 1;
-    
   }
   
-
-
-  @media screen and (max-width: 992px){
-    .portfolio_wrap-container{
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media screen and (max-width: 576px){
-    .portfolio_wrap-container{
-      grid-template-columns: 1fr;
-    }
-    .portfolio_filters li{
-      font-size: 16px;
+  @media only screen and (max-width: 768px) {
+    .image-row img {
+      width: 100%; /* Make images fill the width of the container */
+      height: auto; /* Let the height adjust accordingly */
     }
   }
 
