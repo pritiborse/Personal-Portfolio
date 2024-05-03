@@ -303,7 +303,7 @@ header .container{
         justify-content: center;
     }
     .hero_image img{
-        height: 50px;
+        height: 250px;
         width: auto;
     }
 }
